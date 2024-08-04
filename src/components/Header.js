@@ -22,7 +22,7 @@ const Header = () => {
                 <img src={logoUrl} style={{width: '50px', margin: '10px'}} alt="Logo"/>
                 <Typography
                     variant="h3"
-                    sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
+                    sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'},fontSize: { xs: '22px', sm: '24px' },}}
                 >
                     Triadic Infosolutions
                 </Typography>
@@ -36,8 +36,8 @@ const Header = () => {
                     <Button color="inherit" component={NavLink} variant='navLink' to="/about">
                         About
                     </Button>
-                    <Button color="inherit" component={NavLink} variant='navLink' to="/contact">
-                        Contact
+                    <Button color="inherit" component={NavLink} variant='navLink' to="/Contact-us">
+                        Contact-us
                     </Button>
                 </Box>
                 <IconButton
@@ -79,8 +79,8 @@ const Header = () => {
                     <MenuItem onClick={handleCloseMenu} component={NavLink} to="/about">
                         About
                     </MenuItem>
-                    <MenuItem onClick={handleCloseMenu} component={NavLink} to="/contact">
-                        Contact
+                    <MenuItem onClick={handleCloseMenu} component={NavLink} to="/Contact-us">
+                        Contact-us
                     </MenuItem>
                 </Menu>
             </Toolbar>

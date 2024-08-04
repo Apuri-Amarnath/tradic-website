@@ -50,17 +50,17 @@ const theme = createTheme({
             color: '#000000',
         },
         body1: {
-            fontSize: 16,
+            fontSize: 18,
             fontWeight: 400,
             color: '#000000',
         },
         body2: {
-            fontSize: 14,
+            fontSize: 16,
             fontWeight: 300,
             color: '#000000',
         },
         caption: {
-            fontSize: 12,
+            fontSize: 14,
             fontWeight: 200,
             color: '#555',
         },
@@ -133,7 +133,7 @@ function App() {
             <Route path="/" index element={<Home/>}/>
             <Route path='/services' element={<Services/>}/>
             <Route path='/about' element={<About/>}/>
-            <Route path='/contact' element={<Contact/>}/>
+            <Route path='/contact-us' element={<Contact/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
         <Footer/>
