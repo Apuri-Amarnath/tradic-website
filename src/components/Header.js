@@ -17,7 +17,7 @@ const Header = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="sticky" sx={{ top: 0, zIndex: 1000 }}>
             <Toolbar>
                 <img src={logoUrl} style={{width: '50px', margin: '10px'}} alt="Logo"/>
                 <Typography
