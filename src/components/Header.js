@@ -12,7 +12,9 @@ const Header = () => {
     const handleOpenMenu = (event) => {
         setAnchorEl(event.currentTarget);
     };
-
+    const ButtonStyles = {
+        fontSize: '18px',
+    }
     const handleCloseMenu = () => {
         setAnchorEl(null);
     };
@@ -42,16 +44,16 @@ const Header = () => {
                         xl: 'block',
                     }, marginLeft: 'auto'
                 }}>
-                    <Button color="inherit" component={NavLink} to="/" variant='navLink'>
+                    <Button sx={ButtonStyles} color="inherit" component={NavLink} to="/">
                         Home
                     </Button>
-                    <Button color="inherit" component={NavLink} variant='navLink' to="/services">
+                    <Button sx={ButtonStyles} color="inherit" component={NavLink} to="/services">
                         Services
                     </Button>
-                    <Button color="inherit" component={NavLink} variant='navLink' to="/about">
+                    <Button sx={ButtonStyles} color="inherit" component={NavLink} to="/about">
                         About
                     </Button>
-                    <Button color="inherit" component={NavLink} variant='navLink' to="/contact">
+                    <Button sx={ButtonStyles} color="inherit" component={NavLink} to="/contact">
                         Contact
                     </Button>
                 </Box>

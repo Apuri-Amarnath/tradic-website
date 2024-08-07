@@ -146,13 +146,13 @@ const theme = createTheme({
                             textTransform: 'none',
                             fontSize: {
                                 xs: '22px',
-                                sm: '24px',  // Small screens
-                                md: '26px',  // Medium screens
-                                lg: '28px',  // Large screens
-                                xl: '30px',  // Extra large screens
+                                sm: '18px',
+                                md: '30px',
+                                lg: '24px',
+                                xl: '24px',
                             },
                             fontWeight: 500,
-                            color: '#000000',
+                            color: '#222',
                             '&:hover': {
                                 backgroundColor: '#e5dcdc',
                             }

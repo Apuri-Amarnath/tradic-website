@@ -22,12 +22,13 @@ import {TypeAnimation} from "react-type-animation";
 
 const HeroSection = styled(Box)({
     textAlign: 'center',
-    padding: '20px 20px',
 });
 
-const ContactButton = styled(Button)({});
+const ContactButton = styled(Button)({
+    fontSize: '16px',
+});
 const ReadButton = styled(Button)({
-    marginTop: '20px',
+    fontSize: '16px',
 })
 const Section = styled(Box)({
     padding: '40px 20px',
@@ -116,11 +117,11 @@ const Home = () => {
 
     return (
         <>
-            <Container>
+            <Container maxWidth="xl">
                 {/* Hero Section */}
                 <HeroSection>
-                    <div style={{
-                        backgroundcolor: 'linear-gradient(to right, #f0a11e ,black)',
+                    <Box style={{
+                        backgroundImage: 'linear-gradient(80deg,#2e5cf0 0%, #eca429 100%)',
                         backgroundSize: '100% 100%',
                         backgroundRepeat: 'no-repeat',
                         display: 'flex',
@@ -128,14 +129,16 @@ const Home = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
+                        <Typography variant="h4" component="h2" gutterBottom
+                                    sx={{'marginTop': '30px', 'color': 'white'}}>
+                            Welcome to Triadic Infosolutions
+                        </Typography>
                         <img src={WebDevelopmentIllustration} alt="Web Development"
                              style={{width: '40%', margin: '40px'}}/>
                         <Typography variant="h4" component="h2" gutterBottom>
                     <span style={{backgroundColor: 'white', padding: '0.2rem'}}>
                         <TypeAnimation
                             sequence={[
-                                'Welcome to Triadic Infosolutions',
-                                1000,
                                 'Innovative Web Solutions',
                                 1000,
                                 'Expertise in Web Development',
@@ -154,11 +157,11 @@ const Home = () => {
                             Crafting Digital Experiences
                         </Typography>
                         <Typography variant="h6" component="p" gutterBottom textAlign={'center'}
-                                    sx={{width: '70%%', color: 'black', padding: '20px'}}>
+                                    sx={{width: '70%', color: 'black', padding: '20px'}}>
                             We specialize in creating beautiful, functional, and user-friendly websites. Our expert team
                             helps businesses establish a strong online presence with Wix and WordPress solutions.
                         </Typography>
-                    </div>
+                    </Box>
                 </HeroSection>
                 {/* Our Web Development Services */}
             </Container>
@@ -289,28 +292,28 @@ const Home = () => {
             {/* Contact-us Call-to-Action */
             }
             <BoxSection>
-                    <Box sx={{
-                        backgroundColor: '#2558ff',
-                        textAlign: 'center',
-                        height: '30vh',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}>
-                        <Typography variant="h4" component="h3" gutterBottom>
-                            Ready to Build Your Dream Website?
-                        </Typography>
-                        <Typography variant="h6" component="p" gutterBottom sx={{'padding': '3%'}}>
-                            Whether you're looking for a stunning new website, a redesign, or reliable maintenance
-                            services,
-                            Triadic Infosolutions is here to help.
-                        </Typography>
-                        <ContactButton variant="contained" color="primary"
-                                       onClick={() => handleClickbutton('/Contact-us')}>
-                            Contact Us
-                        </ContactButton>
-                    </Box>
+                <Box sx={{
+                    backgroundImage: 'linear-gradient(0deg,#2e5cf0 0%, #eca429 100%)',
+                    textAlign: 'center',
+                    height: '30vh',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}>
+                    <Typography variant="h4" component="h3" gutterBottom sx={{'color': 'white'}}>
+                        Ready to Build Your Dream Website?
+                    </Typography>
+                    <Typography variant="h6" component="p" gutterBottom sx={{'padding': '3%', 'color': 'white'}}>
+                        Whether you're looking for a stunning new website, a redesign, or reliable maintenance
+                        services,
+                        Triadic Infosolutions is here to help.
+                    </Typography>
+                    <ContactButton variant="contained" color="primary"
+                                   onClick={() => handleClickbutton('/Contact-us')}>
+                        Contact Us
+                    </ContactButton>
+                </Box>
             </BoxSection>
         </>
     )
