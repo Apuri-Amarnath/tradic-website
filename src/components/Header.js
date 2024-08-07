@@ -2,6 +2,7 @@ import React from 'react'
 import {AppBar, Box, Button, IconButton, Menu, MenuItem, Toolbar, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu'
+import {styled} from "@mui/system";
 
 
 const logoUrl = `${process.env.PUBLIC_URL}/site-logo.png`;
@@ -15,18 +16,32 @@ const Header = () => {
     const handleCloseMenu = () => {
         setAnchorEl(null);
     };
-
+    const MobileMenuItem = styled(MenuItem)({
+        fontSize: '20px',
+    });
     return (
-        <AppBar position="sticky" sx={{ top: 0, zIndex: 1000 }}>
+        <AppBar position="sticky" sx={{top: 0, zIndex: 1000}}>
             <Toolbar>
                 <img src={logoUrl} style={{width: '50px', margin: '10px'}} alt="Logo"/>
                 <Typography
                     variant="h3"
-                    sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'},fontSize: { xs: '22px', sm: '24px' },}}
+                    sx={{
+                        flexGrow: 1,
+                        display: {xs: 'block', md: 'block', sm: 'block'},
+                        fontSize: {xs: '22px', sm: '24px'},
+                    }}
                 >
                     Triadic Infosolutions
                 </Typography>
-                <Box sx={{display: {xs: 'none', sm: 'block'}, marginLeft: 'auto'}}>
+                <Box sx={{
+                    display: {
+                        xs: 'none',
+                        sm: 'block',
+                        md: 'none',
+                        lg: 'block',
+                        xl: 'block',
+                    }, marginLeft: 'auto'
+                }}>
                     <Button color="inherit" component={NavLink} to="/" variant='navLink'>
                         Home
                     </Button>
@@ -36,15 +51,23 @@ const Header = () => {
                     <Button color="inherit" component={NavLink} variant='navLink' to="/about">
                         About
                     </Button>
-                    <Button color="inherit" component={NavLink} variant='navLink' to="/Contact-us">
-                        Contact-us
+                    <Button color="inherit" component={NavLink} variant='navLink' to="/contact">
+                        Contact
                     </Button>
                 </Box>
                 <IconButton
                     edge="end"
                     color="inherit"
                     aria-label="menu"
-                    sx={{marginLeft: 'auto', display: {xs: 'block', sm: 'none'}}}
+                    sx={{
+                        marginLeft: 'auto', display: {
+                            xs: 'block',
+                            sm: 'none',
+                            md: 'block',
+                            lg: 'none',
+                            xl: 'none',
+                        }
+                    }}
                     onClick={handleOpenMenu}
                 >
                     <MenuIcon/>
@@ -67,21 +90,28 @@ const Header = () => {
                         style: {
                             width: '200px',
                             maxHeight: '300px',
+                            fontSize: {
+                                xs: '22px',
+                                sm: '24px',
+                                md: '26px',
+                                lg: '28px',
+                                xl: '30px',
+                            },
                         },
                     }}
                 >
-                    <MenuItem onClick={handleCloseMenu} component={NavLink} to="/">
+                    <MobileMenuItem onClick={handleCloseMenu} component={NavLink} to="/">
                         Home
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseMenu} component={NavLink} to="/services">
+                    </MobileMenuItem>
+                    <MobileMenuItem onClick={handleCloseMenu} component={NavLink} to="/services">
                         Services
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseMenu} component={NavLink} to="/about">
+                    </MobileMenuItem>
+                    <MobileMenuItem onClick={handleCloseMenu} component={NavLink} to="/about">
                         About
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseMenu} component={NavLink} to="/Contact-us">
-                        Contact-us
-                    </MenuItem>
+                    </MobileMenuItem>
+                    <MobileMenuItem onClick={handleCloseMenu} component={NavLink} to="/contact">
+                        Contact
+                    </MobileMenuItem>
                 </Menu>
             </Toolbar>
         </AppBar>
