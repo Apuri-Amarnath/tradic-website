@@ -29,6 +29,7 @@ const ContactButton = styled(Button)({
 });
 const ReadButton = styled(Button)({
     fontSize: '16px',
+    marginTop:'20px',
 })
 const Section = styled(Box)({
     padding: '40px 20px',
@@ -83,7 +84,7 @@ const GridSectionBox = styled(Box)(({theme}) => ({
         padding: '1vh 10vw',
     },
     [theme.breakpoints.down('sm')]: {
-        padding: '10px 10px',
+        padding: '0 10px',
         marginBottom: '50px',
         marginLeft: '50px'
     },
@@ -104,7 +105,7 @@ const GridSectionBox = styled(Box)(({theme}) => ({
 const CardHeader = styled(Typography)({
     backgroundColor: '#f0a11e',
     color: '#ffffff',
-    padding: '20px 20px',
+    padding: '10px 10px',
     marginBottom: '20px',
     textAlign: 'center',
 });
@@ -128,6 +129,7 @@ const Home = () => {
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        marginBottom: '3vh',
                     }}>
                         <Typography variant="h4" component="h2" gutterBottom
                                     sx={{'marginTop': '30px', 'color': 'white'}}>
@@ -157,7 +159,7 @@ const Home = () => {
                             Crafting Digital Experiences
                         </Typography>
                         <Typography variant="h6" component="p" gutterBottom textAlign={'center'}
-                                    sx={{width: '70%', color: 'black', padding: '20px'}}>
+                                    sx={{width: '70%', padding: '20px', color: '#feee'}}>
                             We specialize in creating beautiful, functional, and user-friendly websites. Our expert team
                             helps businesses establish a strong online presence with Wix and WordPress solutions.
                         </Typography>
@@ -167,7 +169,7 @@ const Home = () => {
             </Container>
             <div>
                 <GridSectionBox>
-                    <Typography variant="h5" component="h2" gutterBottom
+                    <Typography variant="h5" component="h2"
                                 sx={{width: '100%', padding: '1vh', textAlign: 'left'}}>
                         Our Web Development Services
                     </Typography>
@@ -179,7 +181,18 @@ const Home = () => {
                                         Custom Website Development
                                     </CardHeader>
                                     <img src={WebsiteDesign} alt="Custom Website Development"
-                                         style={{width: '100%', marginBottom: '20px'}}/>
+                                         sx={{
+                                             width: '100%',
+                                             height: 'auto',
+                                             marginBottom: '20px',
+                                             padding: {
+                                                 sm: '10px',
+                                                 md: '15px',
+                                                 lg: '20px',
+                                                 xl: '25px',
+                                             },
+                                             boxSizing: 'border-box',
+                                         }}/>
                                     <Typography variant="h6" component="p">
                                         We create websites tailored to your specific needs, ensuring a unique and
                                         engaging
@@ -232,7 +245,7 @@ const Home = () => {
             </div>
             <GridSectionBox>
 
-                <Typography variant="h5" component="h2" gutterBottom
+                <Typography variant="h5" component="h2"
                             sx={{width: '100%', padding: '1vh', textAlign: 'left'}}>
                     Our Recent Projects
                 </Typography>

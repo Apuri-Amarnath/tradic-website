@@ -68,10 +68,6 @@ const theme = createTheme({
             h5: {
                 fontSize: {
                     xs: '16px',
-                    sm: '14px',
-                    md: '12px',
-                    lg: '18px',
-                    xl: '18px',
                 },
                 fontWeight: 300,
                 color: '#000000'
