@@ -9,7 +9,7 @@ const NotFoundPage = () => {
             alignItems: 'center',
             height: '100vh',
             backgroundColor: '#f0f0f0', // Light grey background
-            color: '#333', // Dark text color
+            color: '#383737', // Dark text color
             textAlign: 'center'
         }}>
             <h1 style={{
@@ -22,14 +22,14 @@ const NotFoundPage = () => {
             </h1>
             <p style={{
                 fontSize: '1.5rem',
-                color: '#555', // Slightly lighter grey for the message
+                color: '#000000', // Slightly lighter grey for the message
                 margin: '20px 0'
             }}>
                 Oops! Page Not Found
             </p>
             <a href="/" style={{
                 fontSize: '1rem',
-                color: '#007bff', // Primary blue color for the link
+                color: '#2558ff', // Primary blue color for the link
                 textDecoration: 'none',
                 border: '1px solid #007bff',
                 padding: '10px 20px',

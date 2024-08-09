@@ -37,78 +37,77 @@ const CustomHr = styled("hr")(({theme}) => ({
 }));
 
 const Footer = () => {
-        return (
-            <footer style={{marginTop: '10px', backgroundColor: '#223a',}}>
-                <Container maxWidth='lg' sx={{
-                    display: {
-                        sx: 'flex',
-                        md: 'block',
-                        lg: 'flex',
-                        xl: 'flex',
-                    }, flexDirection: 'row', textAlign: 'center', padding: '1vh',
-                }}>
-                    <Container sx={{marginBottom: '20px'}}>
-                        < Typography variant={'h5'} sx={{color: 'white'}} gutterBottom>
-                            Address
-                        </Typography>
-                        <CustomHr/>
-                        <Typography variant={'h6'} component={'p'} sx={{color: 'white'}}>
-                            Vijaynagar Colony, Hyderabad, Telangana 500007, IN
-                        </Typography>
-                    </Container>
-                    <Container sx={{marginBottom: '20px'}}>
-                        <Typography variant="h5"
-                                    sx={{color: 'white', textAlign: 'center'}}
-                                    gutterBottom>
-                            Quick Links
-                        </Typography>
-                        <CustomHr/>
-                        <List sx={{padding: '0',}}>
-                            <CustomListItem
-                                component={NavLink}
-                                to="/"
-                            >
-                                Home
-                            </CustomListItem>
-                            <CustomListItem
-                                component={NavLink}
-                                to="/about"
-
-                            >About
-
-                            </CustomListItem>
-                            <CustomListItem
-                                component={NavLink}
-                                to="/services"
-
-                            >Services
-                            </CustomListItem>
-                            <CustomListItem
-                                component={NavLink}
-                                to="/contact"
-                            >Contact
-                            </CustomListItem>
-                        </List>
-                    </Container>
-                    <Container sx={{marginBottom: '20px'}}>
-                        <Typography variant="h5"
-                                    sx={{color: 'white'}}
-                                    gutterBottom>
-                            Social links
-                        </Typography>
-                        <CustomHr/>
-                        <List sx={{padding: '0',}}>
-                        </List>
-                    </Container>
+    return (
+        <footer style={{marginTop: '10px', backgroundColor: '#223a',}}>
+            <Container maxWidth='lg' sx={{
+                display: {
+                    sx: 'block',
+                    md: 'block',
+                    sm: 'flex',
+                    lg: 'flex',
+                    xl: 'flex',
+                }, flexDirection: 'row', textAlign: 'center', padding: '1vh',
+            }}>
+                <Container sx={{marginBottom: '20px'}}>
+                    < Typography variant={'h5'} sx={{color: 'white'}} gutterBottom>
+                        Address
+                    </Typography>
+                    <CustomHr/>
+                    <Typography variant={'h6'} component={'p'} sx={{color: 'white'}}>
+                        Vijaynagar Colony, Hyderabad, Telangana 500007, IN
+                    </Typography>
                 </Container>
-                <Typography sx={{backgroundColor: '#f0f0f0'}} variant="h6" textAlign="center" padding={1} marginY={2}>© 2024
-                    Triadic
-                    Infosolutions. All rights
-                    reserved.</Typography>
-            </footer>
-        )
-            ;
-    }
-;
+                <Container sx={{marginBottom: '20px'}}>
+                    <Typography variant="h5"
+                                sx={{color: 'white', textAlign: 'center'}}
+                                gutterBottom>
+                        Quick Links
+                    </Typography>
+                    <CustomHr/>
+                    <List sx={{padding: '0',}}>
+                        <CustomListItem
+                            component={NavLink}
+                            to="/"
+                        >
+                            Home
+                        </CustomListItem>
+                        <CustomListItem
+                            component={NavLink}
+                            to="/about"
+
+                        >About
+
+                        </CustomListItem>
+                        <CustomListItem
+                            component={NavLink}
+                            to="/services"
+
+                        >Services
+                        </CustomListItem>
+                        <CustomListItem
+                            component={NavLink}
+                            to="/contact"
+                        >Contact
+                        </CustomListItem>
+                    </List>
+                </Container>
+                <Container sx={{marginBottom: '20px'}}>
+                    <Typography variant="h5"
+                                sx={{color: 'white'}}
+                                gutterBottom>
+                        Social links
+                    </Typography>
+                    <CustomHr/>
+                    <List sx={{padding: '0',}}>
+                    </List>
+                </Container>
+            </Container>
+            <Typography sx={{backgroundColor: '#f0f0f0'}} variant="h6" textAlign="center" padding={1} marginY={2}>© 2024
+                Triadic
+                Infosolutions. All rights
+                reserved.</Typography>
+        </footer>
+    );
+};
 
 export default Footer;
