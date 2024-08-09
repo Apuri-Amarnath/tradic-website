@@ -14,6 +14,12 @@ const Header = () => {
     };
     const ButtonStyles = {
         fontSize: '18px',
+        transition: 'transform 0.3s ease-in-out',
+        margin: '0 5px',
+        '&:hover': {
+            transform: 'scale(1.10)',
+            backgroundColor: 'inherit',
+        },
     }
     const handleCloseMenu = () => {
         setAnchorEl(null);
