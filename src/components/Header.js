@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar, Box, Button, IconButton, Menu, MenuItem, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, Button, IconButton, Link, Menu, MenuItem, Toolbar, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu'
 import {styled} from "@mui/system";
@@ -31,16 +31,18 @@ const Header = () => {
         <AppBar position="sticky" sx={{top: 0, zIndex: 1000}}>
             <Toolbar>
                 <img src={logoUrl} style={{width: '50px', margin: '10px'}} alt="Logo"/>
-                <Typography
-                    variant="h3"
-                    sx={{
-                        flexGrow: 1,
-                        display: {xs: 'block', md: 'block', sm: 'block'},
-                        fontSize: {xs: '22px', sm: '24px'},
-                    }}
-                >
-                    Triadic Infosolutions
-                </Typography>
+                <Link href="/" underline="none" color="inherit">
+                    <Typography
+                        variant="h3"
+                        sx={{
+                            flexGrow: 1,
+                            display: {xs: 'block', md: 'block', sm: 'block'},
+                            fontSize: {xs: '22px', sm: '24px'},
+                        }}
+                    >
+                        Triadic Infosolutions
+                    </Typography>
+                </Link>
                 <Box sx={{
                     display: {
                         xs: 'none',
