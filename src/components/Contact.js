@@ -1,12 +1,13 @@
 import React from 'react';
 import ContactBanner from '../assets/images/contact.jpg'
-import {Box, Button, Container, Divider, Grid, TextField, Typography} from "@mui/material";
+import {Box, Button, Container, Grid, TextField, Typography} from "@mui/material";
 
 import * as PropTypes from "prop-types";
 import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import {styled} from "@mui/system";
+import MapComponent from "./Map";
 
 const CustomBox = styled(Box)(({theme}) => ({
     display: 'flex',
@@ -203,6 +204,12 @@ const Contact = () => {
                         </Typography>
                     </Box>
                 </Box>
+            </Container>
+            <Container maxWidth={'xl'} sx={{textAlign: 'center', padding: '10px', marginBottom: '40px'}}>
+                <Typography variant={'h5'} sx={{fontWeight: '600', color: '#4b3916', margin: '10px 0'}}>
+                    Our Location
+                </Typography>
+                <MapComponent/>
             </Container>
         </>
     )
