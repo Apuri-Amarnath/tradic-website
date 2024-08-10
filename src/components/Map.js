@@ -7,7 +7,7 @@ const MapComponent = () => {
         <Container>
             <Box sx={{
                 borderRadius: '15px', border: 'grey 4px solid', display: 'flex', justifyContent: 'center',
-                height: '30vh'
+                height: '40vh'
             }}>
                 <iframe
                     style={{width: '100%', height: '100%', border: 'none', borderRadius: '10px'}}
