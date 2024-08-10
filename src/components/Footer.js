@@ -41,9 +41,9 @@ const Footer = () => {
         <footer style={{marginTop: '10px', backgroundColor: '#223a',}}>
             <Container maxWidth='lg' sx={{
                 display: {
-                    sx: 'block',
-                    md: 'block',
-                    sm: 'flex',
+                    xs: 'block',
+                    sm: 'block',
+                    md: 'flex',
                     lg: 'flex',
                     xl: 'flex',
                 }, flexDirection: 'row', textAlign: 'center', padding: '1vh',

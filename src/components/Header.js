@@ -44,7 +44,7 @@ const Header = () => {
                 <Box sx={{
                     display: {
                         xs: 'none',
-                        sm: 'block',
+                        sm: 'none',
                         md: 'none',
                         lg: 'block',
                         xl: 'block',
@@ -70,7 +70,7 @@ const Header = () => {
                     sx={{
                         marginLeft: 'auto', display: {
                             xs: 'block',
-                            sm: 'none',
+                            sm: 'block',
                             md: 'block',
                             lg: 'none',
                             xl: 'none',
